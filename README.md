@@ -53,9 +53,36 @@ For redirects, the expiration url redirect takes precedence over the exhaustion 
 
 If no redirects are set for exhausted / expired url then a `404` is returned.
 
+## Storage
+
+The supported storage if for kv stores 
+
+### Key schema
+
+Keys should be grouped by domain, at startup the default domain 
+is `default`. 
+
+There are 2 type of objects for a domain, config and shortcodes:
+
+There is always one **config** config key for a domain and the key is:
+
+```
+<HASH(domain):config>
+```
+
+**shortcodes** have cardinality `0...N` hand the keys are:
+
+```
+<HASH(domain):HASH(shortcode)>
+```
+
+## CLI Doc
+
+TODO
+
 ## Api Doc
 
-
+TODO
 
 
 A [`docker-compose`](https://docs.docker.com/compose/) example is available in the [`examples/docker`](https://github.com/noandrea/distill/blob/master/examples/docker)
