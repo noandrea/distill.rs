@@ -31,6 +31,7 @@ use log4rs::config::{Appender, Config, Root};
 use std::env;
 
 pub mod server;
+pub mod utils;
 
 const VERSION: &'static str = env!("CARGO_PKG_VERSION");
 
