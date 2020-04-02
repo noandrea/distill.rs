@@ -31,7 +31,7 @@ test: test-all
 
 test-all:
 	@echo running tests 
-	go test $(GOPACKAGES) -race -coverprofile=coverage.txt -covermode=atomic
+	cargo test
 	@echo tests completed
 
 bench: bench-all
